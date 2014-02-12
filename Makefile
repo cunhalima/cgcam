@@ -26,17 +26,23 @@ BDIR=bin
 ODIR=obj
 SDIR=src
 CPP=g++
-CFLAGS=-O2 -Wall -Wextra -g
-CFLAGS+=-Wno-unused-parameter -Wno-unused-variable
-CFLAGS+=-Wno-unused-but-set-variable
-CFLAGS+=-Wno-unused-function
-CFLAGS+=-Wno-strict-aliasing
-CFLAGS+=-I$(GL_INCLUDE)
-CFLAGS+=-I/home/alex/src/AntTweakBar/include
+CPPFLAGS=-O2 -Wall -Wextra -g
+CPPFLAGS+=-Wno-unused-parameter -Wno-unused-variable
+CPPFLAGS+=-Wno-unused-but-set-variable
+CPPFLAGS+=-Wno-unused-function
+CPPFLAGS+=-Wno-strict-aliasing
+CPPFLAGS+=-I$(GL_INCLUDE)
+CPPFLAGS+=-I/home/alex/src/AntTweakBar/include
 LDFLAGS=-g -L$(GL_LIB) -L/home/alex/src/AntTweakBar/lib \
         -lGL -lglfw -lGLEW -lm -lAntTweakBar
 _MAINTEST=main.o
-_MODULES=model.o shader.o video.o texture.o map.o client.o server.o unix.o net.o camera.o
+_MODULES=cl_connect.o cl_game.o cl_input.o cl_main.o cl_parse.o cl_player.o cl_render.o \
+         assets.o cfun.o console.o cvar.o math.o net.o szb.o \
+         conunix.o timer.o \
+         re_main.o re_map.o re_md2.o re_particle.o re_scene.o re_shader.o re_t01.o re_text.o re_texture.o re_vidcon.o \
+         sv_clientstate.o sv_connect.o sv_entity.o sv_main.o sv_player.o sv_snapshot.o \
+         snd_main.o \
+         sys_glfw.o
 MAINTEST=$(patsubst %, $(ODIR)/%, $(_MAINTEST))
 MODULES=$(patsubst %, $(ODIR)/%, $(_MODULES))
 OBJS=$(MAINTEST) $(MODULES)
@@ -54,7 +60,28 @@ $(EXE): $(MAINTEST) $(MODULES)
 	@$(CPP) $^ $(LDFLAGS) -o $@
 
 $(ODIR)/%.o: $(SDIR)/%.cpp
-	@$(CPP) -c $< $(CFLAGS) -o $@
+	@$(CPP) -c $< $(CPPFLAGS) -o $@
+
+$(ODIR)/%.o: $(SDIR)/client/%.cpp
+	@$(CPP) -c $< $(CPPFLAGS) -o $@
+
+$(ODIR)/%.o: $(SDIR)/common/%.cpp
+	@$(CPP) -c $< $(CPPFLAGS) -o $@
+
+$(ODIR)/%.o: $(SDIR)/platform/%.cpp
+	@$(CPP) -c $< $(CPPFLAGS) -o $@
+
+$(ODIR)/%.o: $(SDIR)/ref/%.cpp
+	@$(CPP) -c $< $(CPPFLAGS) -o $@
+
+$(ODIR)/%.o: $(SDIR)/server/%.cpp
+	@$(CPP) -c $< $(CPPFLAGS) -o $@
+
+$(ODIR)/%.o: $(SDIR)/sound/%.cpp
+	@$(CPP) -c $< $(CPPFLAGS) -o $@
+
+$(ODIR)/%.o: $(SDIR)/sys/%.cpp
+	@$(CPP) -c $< $(CPPFLAGS) -o $@
 
 $(EXE): | $(BDIR)
 
@@ -67,14 +94,17 @@ $(ODIR):
 	@mkdir -p $(ODIR)
 
 #.c.o:
-#	@$(CC) -c $< $(CFLAGS) -o $@
+#	@$(CC) -c $< $(CPPFLAGS) -o $@
 #
 run: $(EXE)
 	@LD_LIBRARY_PATH=/home/alex/src/AntTweakBar/lib ./$(EXE)
 
 net: $(EXE)
-	@LD_LIBRARY_PATH=/home/alex/src/AntTweakBar/lib ./$(EXE) &
-	@LD_LIBRARY_PATH=/home/alex/src/AntTweakBar/lib ./$(EXE) -c 127.0.0.1
+	@./$(EXE) -0 &
+	@./$(EXE) -1 -c 127.0.0.1 &
+
+conn2: $(EXE)
+	@./$(EXE) -c 192.168.0.2
 
 val: $(EXE)
 	@valgrind --tool=memcheck ./$(EXE)

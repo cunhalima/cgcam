@@ -1,5 +1,11 @@
 # exe
-cgcam
+bin/*
+external/*
+trash/*
+x64/*
+dbgbin/*
+*.sdf
+*.log
 
 # Object files
 *.o

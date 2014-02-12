@@ -1,0 +1,51 @@
+
+Lembrar de ajustar pra colocar o lastreceived frame iniciando em -1 porque mudei agora
+o frame invalido de 0 pra -1
+
+	coloquei cs.lastSnapshotNumber = -1;	// last does not exist
+	não sei se era isso
+
+
+TODO::
+
+comentar  tudo
+ver se precisa da variavel probabletime
+colocar uma variavel para mostrar o clamp
+
+
+simular perda de pacotes
+simular atraso de pacotes
+isso tudo pode ser simulado no servidor dedicado. aí ele simula tudo e tem q rodar
+bem rápido pra q o atraso seja aquele que a gente quer
+
+mudar a linha 		cs.player.entity.id = szb_read8(msg); para que o server só mande o id do cliente no início
+
+mudar my_mix pra funcao matematica em cmath.cpp
+
+
+RE_AddRefEntityToScene checar se o modelo existe antes de adicionar
+
+colocar o lerp em rs em vez de usar como retorno de uma funcao
+
+colocar o estado do console.cpp em uma struct tipo common
+
+depois fazer um scan dos unsigned pra eliminar aquele teste tosco se é maior q zero e menor q um valor
+
+ajeitar o conwin.cpp (fazr um próprio)
+
+fazer uma cvar pro minmilli do timer
+
+mudar o md2 pra usar md2_t que nem o map (e pegar o md2_t por índice)
+
+mudar invalid_entity pra IVALID_ENTITY_ID
+
+tirar isso         svEntity_t *e = SV_SpawnEntity(c->id);
+do SV_AddClientWithNNode e colocar só qdo o client manda o primeiro state.
+
+varrer sv_server e client por size_t
+
+varrer todo o projeto por size_t
+
+dividir o sv_main.cpp
+
+mudar o cliente pra em vez de mandar como estado o running mandar as teclas pressionadas

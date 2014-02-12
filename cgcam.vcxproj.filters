@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\cgame">
+      <UniqueIdentifier>{027a45b9-d852-448a-8d33-ea34c4b3ead6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\client">
+      <UniqueIdentifier>{5f4d2bb7-3c6c-48a5-9e2d-f67add443b98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\server">
+      <UniqueIdentifier>{68497cca-81e5-4b3a-8b2c-d0f067f93634}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ref">
+      <UniqueIdentifier>{db0cb026-c6f4-4b8f-a01d-843164cc6605}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\common">
+      <UniqueIdentifier>{b4e9f0f8-12d3-476b-8d1e-92054b4e83dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sgame">
+      <UniqueIdentifier>{e09ae79e-b6dd-4c3e-9297-db76cb661bb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sys">
+      <UniqueIdentifier>{a6451448-d962-4fc7-a07d-3f6089f93836}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sound">
+      <UniqueIdentifier>{6fa81dd3-3e54-4e5f-b1ba-9d6622bbf698}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\platform">
+      <UniqueIdentifier>{9fc808b2-259f-4fdb-8a79-422e2d18920d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{b9094c35-04b1-4422-a2a0-398712cf8a14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test">
+      <UniqueIdentifier>{81935994-45b4-4a89-8e21-7eb2172eb600}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders21">
+      <UniqueIdentifier>{1e7345ae-97bc-42f7-8460-64328ee73367}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cgame\cg_ents.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="src\client\cl_parse.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\net.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ref\re_text.cpp">
+      <Filter>Source Files\ref</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ref\re_scene.cpp">
+      <Filter>Source Files\ref</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ref\re_shader.cpp">
+      <Filter>Source Files\ref</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sys\sys_glfw.cpp">
+      <Filter>Source Files\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ref\re_main.cpp">
+      <Filter>Source Files\ref</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sound\snd_main.cpp">
+      <Filter>Source Files\sound</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cgame\cg_snapshot.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cgame\cg_main.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\szb.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ref\re_texture.cpp">
+      <Filter>Source Files\ref</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\assets.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\console.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\platform\conwin.cpp">
+      <Filter>Source Files\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\platform\timer.cpp">
+      <Filter>Source Files\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\platform\conunix.cpp">
+      <Filter>Source Files\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ref\re_t01.cpp">
+      <Filter>Source Files\ref</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ref\re_vidcon.cpp">
+      <Filter>Source Files\ref</Filter>
+    </ClCompile>
+    <ClCompile Include="src\client\cl_input.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\cvar.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\cfun.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\client\cl_main.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClCompile>
+    <ClCompile Include="src\server\sv_main.cpp">
+      <Filter>Source Files\server</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ref\re_md2.cpp">
+      <Filter>Source Files\ref</Filter>
+    </ClCompile>
+    <ClCompile Include="src\client\cl_render.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClCompile>
+    <ClCompile Include="src\client\cl_player.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ref\re_map.cpp">
+      <Filter>Source Files\ref</Filter>
+    </ClCompile>
+    <ClCompile Include="src\client\cl_connect.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClCompile>
+    <ClCompile Include="src\server\sv_connect.cpp">
+      <Filter>Source Files\server</Filter>
+    </ClCompile>
+    <ClCompile Include="src\server\sv_entity.cpp">
+      <Filter>Source Files\server</Filter>
+    </ClCompile>
+    <ClCompile Include="src\server\sv_snapshot.cpp">
+      <Filter>Source Files\server</Filter>
+    </ClCompile>
+    <ClCompile Include="src\server\sv_player.cpp">
+      <Filter>Source Files\server</Filter>
+    </ClCompile>
+    <ClCompile Include="src\server\sv_clientstate.cpp">
+      <Filter>Source Files\server</Filter>
+    </ClCompile>
+    <ClCompile Include="src\test\controls.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="src\test\objloader.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="src\test\shader.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="src\test\texture.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="src\test\vboindexer.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="src\client\cl_game.cpp">
+      <Filter>Source Files\client</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ref\re_particle.cpp">
+      <Filter>Source Files\ref</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\math.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\defs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\test\controls.hpp">
+      <Filter>Source Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="src\test\objloader.hpp">
+      <Filter>Source Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="src\test\shader.hpp">
+      <Filter>Source Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="src\test\texture.hpp">
+      <Filter>Source Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="src\test\vboindexer.hpp">
+      <Filter>Source Files\test</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\21\font.frag">
+      <Filter>Shaders21</Filter>
+    </None>
+    <None Include="data\21\font.vert">
+      <Filter>Shaders21</Filter>
+    </None>
+    <None Include="data\21\basic2d.frag">
+      <Filter>Shaders21</Filter>
+    </None>
+    <None Include="data\21\basic2d.vert">
+      <Filter>Shaders21</Filter>
+    </None>
+    <None Include="data\21\gouraud.frag">
+      <Filter>Shaders21</Filter>
+    </None>
+    <None Include="data\21\gouraud.vert">
+      <Filter>Shaders21</Filter>
+    </None>
+    <None Include="data\21\map.frag">
+      <Filter>Shaders21</Filter>
+    </None>
+    <None Include="data\21\map.vert">
+      <Filter>Shaders21</Filter>
+    </None>
+    <None Include="data\21\md2.frag">
+      <Filter>Shaders21</Filter>
+    </None>
+    <None Include="data\21\md2.vert">
+      <Filter>Shaders21</Filter>
+    </None>
+    <None Include="data\21\md2gouraud.frag">
+      <Filter>Shaders21</Filter>
+    </None>
+    <None Include="data\21\md2gouraud.vert">
+      <Filter>Shaders21</Filter>
+    </None>
+    <None Include="data\21\md2phong.frag">
+      <Filter>Shaders21</Filter>
+    </None>
+    <None Include="data\21\md2phong.vert">
+      <Filter>Shaders21</Filter>
+    </None>
+    <None Include="data\21\simple.frag">
+      <Filter>Shaders21</Filter>
+    </None>
+    <None Include="data\21\simple.vert">
+      <Filter>Shaders21</Filter>
+    </None>
+    <None Include="data\21\billboard.frag">
+      <Filter>Shaders21</Filter>
+    </None>
+    <None Include="data\21\billboard.vert">
+      <Filter>Shaders21</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="TODO.txt" />
+  </ItemGroup>
+</Project>
